@@ -1,0 +1,332 @@
+# Pete@HOC Basics
+# git bash (set-up commands)
+# ####################
+#
+#
+# NOTE:
+# At some point during this proccess..
+# You will be need to set up your ssh key.   (encryped SHA256 key)
+# Set-up your email account.     (for security, verification, collaborating, job prospects)
+# Create a password / or press enter to skip this.
+#
+#
+# cd
+# means: change directory, go to the directory/folder where you want to create a new directory/folder.
+# If you can't find your path, go into the folder you wish to start your project in..
+# and right click, find: "git bash here" in the menu, then click on it to open the git bash terminal.
+#
+#
+# mkdir
+# means: make a new directory/folder
+#
+#
+# To get started, open up the bash terminal and type:
+#
+#
+# cd desktop/my_projects    (example)
+# Press enter
+#
+#
+# pwd       (print working directory)
+# Press enter
+# This will print to screen the path to your directory/folder.
+#
+#
+# ls
+# Press enter
+# This will print to screen the list of items inside this directory.
+# NOTE: This won't show hidden .files
+#
+#
+# clear
+# Clears the screen
+#
+#
+# ________________( Let's Get Started )___________________
+#
+#
+# Open bash terminal
+#
+#
+# Type:
+# cd desktop/my_projects 	(example)
+# Press Enter
+#
+#
+# Type:
+# mkdir add_your_new_folder_name_here 		(your_newly_created_folder)
+# Press Enter
+#
+#
+# Open up your favorite code editor
+# Type:
+# print('Hello World!')
+# Save this as:
+# hello_world.py 
+# Inside: (your_newly_created_folder).
+#
+#
+# Type:
+# cd your_newly_created_folder
+# Press Enter
+#
+#
+# Type:
+# ls
+# Press Enter
+# Should display:
+# hello_world.py
+#
+#
+# Type:
+# git config --global user.name "Your Name"
+# Press Enter
+# Adding your name here will let others you may be collaborating with..
+# know which collaborator made what changes to the file.
+#
+#
+# Type:
+# git config --global user.email "your_email_address@your_email_provider.com"
+# Press Enter
+# You will be prompted via given email address for verification.
+# Your email address is helpfull if you would like to be contacted..
+# for job offers or messaging within your group of collaborators.
+# You can keep your email address private if you prefer. (inside github settings)
+#
+#
+# Type:
+# git config --global alias.co checkout
+# Press Enter
+#
+#
+# Type:
+# git init
+# Press Enter
+# Initialize your empty repository
+# This will create a hidden .dir called: .git
+# dir means: directory/folder
+#
+#
+# A the end of your directory path, now, in the terminal, you will notice (master)
+# You are now talking to the master branch of your repository.
+# NOTE: Whenever you are inside of "your_newly_created_folder", you will always see (master)..
+# You can "cd" away from this directory to remove (master), however, (master) is required..
+# within this dir to connect to your repository on github
+# IT CAN NOT BE REMOVED, unless you delete the .git dir (not recommended, as this will delete your data)
+#
+#
+# Type:
+# clear
+# Press Enter
+# Clears the screen
+#
+#
+# Type:
+# git add .
+# Press Enter
+#
+#
+# Type:
+# git commit -am "Initial Commit"
+# Press Enter
+#
+#
+# Before we carry on:
+# Open up your browser
+# Go to your github
+# You are in Overview 		(your home page)
+# Look for "Repositories" (in the horizontal menu bar, to the right of your profile image)
+# Click on Repositories
+# Locate the "green button" to the right [New]
+# Create your Repository name
+# Separate words with a hyphen (example: My-New-Repo)
+# Press the "green button" below [Create repository]
+#
+#
+# Back to the bash terminal and type:
+#
+#
+# Type:
+# git remote add origin git@github.com:my-account-name/My-New-Repo.git
+# Press Enter
+#
+#
+# Type:
+# git push -u origin master
+# Press Enter
+#
+#
+# You will now be prompted to continue to connect to github.
+# Press "y" (key) for Yes
+# Enter
+#
+#
+# NOTE:
+# You will get a Warning:
+# Permanently added github.com's ip address to the list of known hosts.
+# This is perfectly fine.
+#
+#
+# Enter a passphrase for key
+# Create a password
+#
+#
+# Type:
+# cd
+# Press Enter
+# This will take you back to your root directory
+#
+#
+# Type:
+# pwd
+# Press Enter
+# Print working directory     (root dir)
+#
+#
+# Type:
+# mkdir .ssh
+# Press Enter
+#
+#
+# Type:
+# cd .ssh
+# Press Enter
+# Print working directory     (.ssh dir)
+#
+#
+# Type:
+# ls
+# Press Enter
+# Should be empty
+#
+#
+# Type:
+# clear
+# Press Enter
+#
+#
+# Type:
+# ssh-keygen.exe
+# Press Enter
+# Key is now created and saved in:
+# .ssh/id_rsa
+#
+#
+# NOTE:
+# You may be prompted for your newly created passphrase.
+# If you didn't create a passphrase, just press enter to carry on.
+# Comfirm pasephrase / or carry on
+# Press Enter
+#
+#
+# You will see a SHA256 Box on the screen.
+#
+#
+# Type:
+# ls
+# Press Enter
+#
+#
+# NOTE:
+# There are 2 new added files (id_rsa  and  id_rsa.pub)
+# id_rsa    (local, stays on your computer)
+# id_rsa.pub    (public,     we will get the SHA256 generated password from here)
+#
+#
+# Type:
+# pwd
+# Press Enter
+# you should see: /c/Users/your-computer-name/.ssh
+#
+#
+# Type:
+# cat /c/Users/your-computer-name/.ssh/id_rsa.pub
+# Press Enter
+#
+#
+# Copy the keygen password
+# NOTE: Not your file path above
+#
+#
+# Go back to your github
+#
+#
+# Go to "settings" in the menu (top right)
+# Look for SSH and GPG keys (in the menu on the left)
+# Press Enter
+#
+#
+# You should be in the SSH Keys (page)
+#
+#
+# Go to the "green button" [New SSH Key] (top right) 
+#
+#
+# You should be in the SSH Keys / Add new (page)
+#
+#
+# In the "Key" textarea field Paste your keygen code.
+# Press the "green button" below [Add SSH Key]
+#
+#
+# _________________________( END )_____________________________________
+#
+#
+# THE CODE BELOW IS THE SAME AS ABOVE
+#
+#
+# ___________________( 1 Initialize git )___________________________________
+#
+# git init
+#
+# ___________________( 2 Sending Files )_________________________________
+#
+# git add .     (the period means, send all files inside of this directory)
+# git add just_this_file.txt     (filename plus extention, sends just a specific/chosen file inside of this directory)
+#
+# ___________________( 3 Add Message )___________________________________
+
+# This will remind you or tell other users 
+# of any changes you made
+# to the file you are commiting to the repository
+#
+# git commit -am "Initial Commit"     (example)
+# Or
+# git commit -am "Added a for loop on line 121"     (example)
+#
+# ___________________( 4 Set up your remote connection )_________________
+#
+# You only need to do this once, on initial set-up
+# If already set-up.. go to (5 Push File)
+# git remote add origin git@github.com:YourGitHubNameHere/NameOfRepositoryYouJustCreated.git
+#
+# ___________________( 5 Push File )_______________________________________
+#
+# git push -u origin master
+# You only need to do this once, then next time it's just:
+# git push
+#
+# ______________________________________________________________________________________________________
+#
+# ___________________( Git Commands )_________________________________________________________________________
+#
+# git config --global user.name "Your Name"
+# git config --global user.email "your_email_address@your_email_provider.com"
+# git config --global alias.co checkout
+# git init
+# git add .
+# git add filename.py
+# git commit -am "Initial Commit"
+# git remote add origin git@github.com:YourGitHubNameHere/NameOfRepositoryYouJustCreated.git
+# git push -u origin master
+#
+# After first set-up ________________
+#
+# The file you made changes to
+# git add filename.py
+#
+# Or, send all in your directory, using the "period"
+# git add .
+#
+# git commit -am "Removed the for loop on line 121"
+# git push
